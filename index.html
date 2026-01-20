@@ -24,11 +24,11 @@
   </head>
 
   <body>
-    <header class="bg-[#1A0B2E] pb-16">
+    <header class="bg-[#1A0B2E]">
       <section class="text-white w-[75%] mx-w-[1440px] mx-auto px-4">
         <nav class="flex items-center justify-between h-20">
           <div class="font-medium text-2xl">
-            <h2 class="text-[2rem] font-bold select-none cursor-pointer">
+            <h2 class="sm:text-[2rem] text-2xl font-bold select-none cursor-pointer">
               Music
               <span
                 class="bg-gradient-to-r from-blue-500 to-green-800 bg-clip-text text-transparent"
@@ -36,63 +36,76 @@
               >
             </h2>
           </div>
+          <button class="block text-4xl text-center sm:hidden cursor-pointer"><i class="fa-solid fa-bars text-blue-400"></i></button>
 
-          <ul class="flex items-center gap-8 text-lg font-medium">
-            <li><a class="text-[1rem] transition transform duration-300 cursor-pointer hover:text-green-400" href="#header">Home</a></li>
-            <li><a class="text-[1rem] transition transform duration-300 cursor-pointer hover:text-green-400" href="#about">About</a></li>
-            <li><a class="text-[1rem] transition transform duration-300 cursor-pointer hover:text-green-400" href="#services">Services</a></li>
-            <li><a class="text-[1rem] transition transform duration-300 cursor-pointer hover:text-green-400" href="#contact">Contact</a></li>
+          <ul class="hidden sm:flex items-center gap-8 text-lg font-medium">
+            <li>
+              <a
+                class="text-[1rem] transition duration-300 hover:text-green-400"
+                href="#header"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[1rem] transition duration-300 hover:text-green-400"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[1rem] transition duration-300 hover:text-green-400"
+                href="#services"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[1rem] transition duration-300 hover:text-green-400"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
           </ul>
+
           <button
-            class="px-8 py-3 rounded-xl text-white font-medium bg-gradient-to-r from-blue-400 to-green-700 hover:scale-105 transition transform duration-300 cursor-pointer"
+            class="hidden sm:block px-8 py-3 rounded-xl text-white font-medium bg-gradient-to-r from-blue-400 to-green-700 hover:scale-105 transition duration-300 cursor-pointer"
           >
             Subscribe <i class="fa-solid fa-arrow-right"></i>
           </button>
         </nav>
       </section>
 
-      <section
-        class="relative bg-[url('./assets/hero-bg.png')] bg-cover bg-center bg-no-repeat h-[760px]"
-      >
-        <div
-          class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] flex items-center justify-center bg-gradient-to-r from-blue-400 to-green-700 rounded-full border-2 border-green-400 select-none"
-        >
+      <section class="relative bg-[url('./assets/hero-bg.png')] bg-cover bg-center bg-no-repeat h-[760px]">
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:w-[420px] w-[280px] sm:h-[420px] h-[280px] flex items-center justify-center bg-gradient-to-r from-blue-400 to-green-700 rounded-full sm:border-3 border-4 border-green-400 select-none">
+
           <img src="./assets/microphone.png" alt="" />
         </div>
 
         <!-- batch -->
         <div
-          class="absolute top-[130px] right-[730px] rounded-full bg-green-400 select-none w-[75px]"
+          class="absolute sm:top-[130px] top-[140px] sm:right-[730px] right-[180px] rounded-full bg-green-400 select-none w-[75px]"
         >
           <h4 class="text-[1.5rem] text-black font-bold text-center uppercase">
             new
           </h4>
         </div>
 
-        <div
-          class="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2"
-        >
-          <h1 class="text-white text-center pt-48 text-[4rem] font-bold">
-            Music
-            <span
-              class="bg-gradient-to-r from-blue-500 to-green-800 bg-clip-text text-transparent"
-              >Wave</span
-            >
-          </h1>
+        <div class="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <h1 class="text-white text-center sm:pt-48 pt-20 sm:text-[4rem] text-[3rem] font-bold">Music <span class="bg-gradient-to-r from-blue-500 to-green-800 bg-clip-text text-transparent">Wave</span></h1>
 
           <p class="text-gray-300 text-center mt-4 text-[1rem]">
             Your daily dose of tech insights, productivity hacks, and personal
             growth
           </p>
           <div class="flex items-center justify-center gap-3 mt-8">
-            <button
-              class="px-8 py-3 rounded-xl text-white font-medium bg-gradient-to-r from-blue-400 to-green-700 hover:from-blue-700 hover:to-green-300 hover:scale-105 transition transform duration-300 cursor-pointer text-[1rem]"
-            >
+            <button class="sm:px-8 sm:py-3 py-3 px-3 sm:w-50 w-40 rounded-xl text-white sm:font-medium text-[0.8rem] bg-gradient-to-r from-blue-400 to-green-700 hover:from-blue-700 hover:to-green-300 hover:scale-105 transition transform duration-300 cursor-pointer ">
               <i class="fa-brands fa-spotify"></i> Listen on Spotify
             </button>
 
             <button
-              class="px-8 py-3 rounded-xl font-medium border-2 border-green-700 hover:scale-105 transition transform duration-300 cursor-pointer text-[1rem] text-green-700 hover:border-blue-400 hover:text-blue-400"
+              class="sm:px-8 sm:py-3 py-3 px-3 sm:w-50 w-40 rounded-xl sm:font-medium text-[0.8rem] border-1 border-green-700 hover:scale-105 transition transform duration-300 cursor-pointer text-[1rem] text-green-700 hover:border-blue-400 hover:text-blue-400"
             >
               <i class="fa-regular fa-envelope"></i> Subscribe
             </button>
@@ -104,11 +117,11 @@
     <!-- About Podcast section -->
     <section class="bg-[#1A0B2E] pb-16">
       <div class="w-[75%] mx-w-[1440px] mx-auto mb-9">
-        <h2 class="text-white text-center text-[3rem] font-bold mb-4">
+        <h2 class="text-white text-center sm:text-[3rem] text-[2.5rem] font-bold mb-4">
           About the Podcast
         </h2>
         <p
-          class="text-gray-300 text-center text-[1rem] mb-4 px-[20%] leading-9"
+          class="text-gray-300 text-center sm:text-[1rem] text-[0.7rem] mb-4 sm:px-[20%] px-[20px] sm:leading-9 leading-5"
         >
           TechWave is your go-to podcast for staying ahead in the fast-paced
           world of technology. We break down complex topics into digestible
@@ -116,7 +129,7 @@
           share stories of personal growth from industry leaders.
         </p>
         <p
-          class="text-gray-300 text-center text-[1rem] mb-4 px-[25%] leading-9"
+          class="text-gray-300 text-center sm:text-[1rem] text-[0.7rem] mb-4 sm:px-[20%] px-[30px] sm:leading-9 leading-5"
         >
           Join thousands of young professionals and tech enthusiasts who start
           their day with TechWave.
@@ -124,43 +137,39 @@
       </div>
 
       <div
-        class="w-[75%] mx-width-[1440px] mx-auto px-4 mt-4 grid grid-cols-4 gap-8 text-center"
+        class="w-[75%] mx-width-[1440px] mx-auto px-4 mt-4 grid sm:grid-cols-4 grid-cols-2 gap-8 text-center"
       >
         <div>
           <h2 class="text-blue-400 text-[3rem] font-black text-center">
             150K+
           </h2>
-          <p class="text-white text-[1rem] text-center">Monthly Listeners</p>
+          <p class="text-white sm:text-[1rem] text-[1.5rem] text-center">Monthly Listeners</p>
         </div>
         <div>
           <h2 class="text-blue-400 text-[3rem] font-black text-center">200+</h2>
-          <p class="text-white text-[1rem] text-center">Episodes Published</p>
+          <p class="text-white sm:text-[1rem] text-[1.5rem] text-center">Episodes Published</p>
         </div>
         <div>
           <h2 class="text-blue-400 text-[3rem] font-black text-center">
             4.9<i class="fa-solid fa-star text-[1.5rem] text-center"></i>
           </h2>
-          <p class="text-white text-[1rem] text-center">Average Rating</p>
+          <p class="text-white sm:text-[1rem] text-[1.5rem] text-center">Average Rating</p>
         </div>
         <div>
           <h2 class="text-blue-400 text-[3rem] font-black text-center">50+</h2>
-          <p class="text-white text-[1rem] text-center">Industry Experts</p>
+          <p class="text-white sm:text-[1rem] text-[1.5rem] text-center">Industry Experts</p>
         </div>
       </div>
     </section>
 
     <!-- Why Choose TechWave section -->
-    <section class="bg-[#230E3D] pb-10 pt-10">
-      <h2 class="text-white text-center text-[3rem] font-bold mb-6">
+     <section class="bg-[#230E3D] pb-10 pt-10">
+      <h2 class="text-white text-center sm:text-[3rem] text-[2.5rem] font-bold mb-6">
         Why Choose TechWave
       </h2>
 
-      <div
-        class="text-white text-center grid grid-cols-6 gap-4 px-4 w-[75%] mx-w-[1440px] mx-auto mb-9 pb-8"
-      >
-        <div
-          class="row-span-[2] col-span-[2] bg-[#351165] rounded-xl p-6 pt-[25%]"
-        >
+      <div class="text-white text-center sm:grid sm:grid-cols-6 grid-cols-1 sm:gap-4 px-4 sm:w-[75%] w-full sm:mx-w-[1440px] mx-auto mb-9 pb-8">
+        <div class="sm:row-span-[2] sm:col-span-[2] bg-[#351165] rounded-xl p-6 sm:pt-[25%] mb-3">
           <p class="text-5xl text-left">
             <i
               class="fa-solid fa-headphones bg-gradient-to-r from-blue-500 to-green-800 bg-clip-text text-transparent"
@@ -176,7 +185,7 @@
           </p>
         </div>
 
-        <div class="row-span-[1] col-span-[4] bg-[#351165] rounded-xl p-6">
+        <div class="sm:row-span-[1] sm:col-span-[4] bg-[#351165] rounded-xl p-6 mb-3">
           <p class="text-5xl text-left">
             <i
               class="fa-solid fa-mobile-screen bg-gradient-to-r from-blue-500 to-green-800 bg-clip-text text-transparent"
@@ -191,7 +200,7 @@
           </p>
         </div>
 
-        <div class="row-span-[1] col-span-[4] bg-[#351165] rounded-xl p-6">
+        <div class="sm:row-span-[1] sm:col-span-[4] bg-[#351165] rounded-xl p-6 mb-3">
           <p class="text-5xl text-left">
             <i
               class="fa-solid fa-earth-asia bg-gradient-to-r from-blue-500 to-green-800 bg-clip-text text-transparent"
@@ -204,7 +213,7 @@
             Connect with tech enthusiasts from over 120 countries worldwide.
           </p>
         </div>
-        <div class="row-span-[1] col-span-[4] bg-[#351165] rounded-xl p-6">
+        <div class="row-span-[1] col-span-[4] bg-[#351165] rounded-xl p-6 mb-3">
           <p class="text-5xl text-left">
             <i
               class="fa-solid fa-bolt-lightning bg-gradient-to-r from-blue-500 to-green-800 bg-clip-text text-transparent"
@@ -220,7 +229,7 @@
             success strategies.
           </p>
         </div>
-        <div class="row-span-[1] col-span-[2] bg-[#351165] rounded-xl p-6">
+        <div class="sm:row-span-[1] sm:col-span-[2] bg-[#351165] rounded-xl p-6 mb-3">
           <p class="text-5xl text-left">
             <i
               class="fa-solid fa-book-open bg-gradient-to-r from-blue-500 to-green-800 bg-clip-text text-transparent"
@@ -239,7 +248,7 @@
 
     <!-- Featured section -->
 
-    <section class="bg-[#1A0B2E] pb-10 pt-10">
+    <section class="bg-[#1A0B2E] pb-10 pt-10 hidden">
       <h2 class="text-white text-center text-[3rem] font-bold mb-6">
         Featured Episodes
       </h2>
@@ -320,7 +329,7 @@
     </section>
 
     <!-- Meet section -->
-    <section class="bg-[#1A0B2E] pb-10 pt-10">
+    <section class="bg-[#1A0B2E] pb-10 pt-10 hidden">
       <h2 class="text-white text-center text-[3rem] font-bold mb-6">
         Meet the Host
       </h2>
@@ -384,7 +393,7 @@
 
     <!-- Footer -->
     <section
-      class="bg-[url('./assets/footer-bg.png')] bg-cover bg-center bg-no-repeat h-[420px]"
+      class="bg-[url('./assets/footer-bg.png')] bg-cover bg-center bg-no-repeat h-[420px] hidden"
     >
       <div class="w-[75%] mx-w-[1440px] mx-auto">
         <h1 class="text-white text-center pt-48 text-[4rem] font-bold">
@@ -396,24 +405,32 @@
         </h1>
 
         <div class="flex items-center justify-center gap-4 mt-4">
-          <span class="text-[1rem] text-gray-300 transition transform duration-300 cursor-pointer hover:text-green-400"
+          <span
+            class="text-[1rem] text-gray-300 transition transform duration-300 cursor-pointer hover:text-green-400"
             ><i
               class="fa-brands fa-spotify text-white transition transform duration-300 cursor-pointer hover:text-green-400"
             ></i>
             Spotify</span
           >
-          <span class="text-[1rem] text-gray-300 transition transform duration-300 cursor-pointer hover:text-green-400"
-            ><i class="fa-brands fa-apple text-white transition transform duration-300 cursor-pointer hover:text-green-400"></i>
+          <span
+            class="text-[1rem] text-gray-300 transition transform duration-300 cursor-pointer hover:text-green-400"
+            ><i
+              class="fa-brands fa-apple text-white transition transform duration-300 cursor-pointer hover:text-green-400"
+            ></i>
             Apple Music</span
           >
-          <span class="text-[1rem] text-gray-300 transition transform duration-300 cursor-pointer hover:text-green-400"
+          <span
+            class="text-[1rem] text-gray-300 transition transform duration-300 cursor-pointer hover:text-green-400"
             ><i
               class="fa-brands fa-youtube text-white transition transform duration-300 cursor-pointer hover:text-green-400"
             ></i>
             YouTube Music</span
           >
-          <span class="text-[1rem] text-gray-300 transition transform duration-300 cursor-pointer hover:text-green-400"
-            ><i class="fa-brands fa-amazon text-white transition transform duration-300 cursor-pointer hover:text-green-400"></i>
+          <span
+            class="text-[1rem] text-gray-300 transition transform duration-300 cursor-pointer hover:text-green-400"
+            ><i
+              class="fa-brands fa-amazon text-white transition transform duration-300 cursor-pointer hover:text-green-400"
+            ></i>
             Amazon Music</span
           >
         </div>
